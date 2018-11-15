@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<form action="/echo" method="POST">
+		<h1>信用卡申请表</h1>
+		<fieldset>
+			<legend>个人信息</legend>
+			<table>
+				<tr>
+					<td>姓名：</td>
+					<td><input type="text" name="name" placeholder="请输入您的真实姓名"></td>
+					<td>性别：</td>
+					<td><input type="radio" name="sex" value="male">男<input type="radio" name="sex" value="female">女</td>
+				</tr>
+				<tr>
+					<td>学历：</td>
+					<td><input type="text" name="education" placeholder="请输入您的最高学历"></td>
+					<td>婚姻：</td>
+					<td><input type="text" name="marriage" placeholder="请输入您的婚姻情况"></td>
+				</tr>
+				<tr>
+					<td>手机号码：</td>
+					<td><input type="text" name="mobilephone" placeholder="请输入您的手机号码"></td>
+					<td>身份证号：</td>
+					<td><input type="text" name="idcard" placeholder="请输入您的身份证号"></td>
+				</tr>
+				<tr>
+					<td>身份证有效期：</td>
+					<td><input type="text" name="period" placeholder="请输入您的身份证有效期"></td>
+					<td>现居住地址：</td>
+					<td><input type="text" name="address" placeholder="请输入您的当前居住地址"></td>
+				</tr>
+				<tr>
+					<td>住房性质：</td>
+					<td><input type="checkbox" name="type" value="self">自建房
+						<input type="checkbox" name="type" value="buy">按揭房
+						<input type="checkbox" name="type" value="rent">租用
+						<input type="checkbox" name="type" value="business">其他</td>
+				</tr>
+				<tr>
+					<td><button type="submit">提交</button></td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend>工作信息</legend>
+			<table>
+				<tr>
+					<td>单位名称：</td>
+					<td><input type="text" name="company" placeholder="请输入您的单位名称"></td>
+					<td>单位地址：</td>
+					<td><input type="text" name="companyAdd" placeholder="请输入您的单位地址"></td>
+				</tr>
+				<tr>
+					<td>职位：</td>
+					<td><input type="text" name="position" placeholder="请输入您的职位"></td>
+					<td>入职时间：</td>
+					<td><input type="text" name="data" placeholder="请输入您的入职时间"></td>
+				</tr>
+				<tr>
+					<td>年收入：</td>
+					<td><input type="text" name="income" placeholder="请输入您的年收入"></td>
+				</tr>
+				<tr>
+					<td><button type="submit">提交</button></td>
+				</tr>
+			</table>
+		</fieldset>
+		</fieldset>
+		<fieldset>
+			<legend>其他银行信用卡信息</legend>
+			<table>
+				<tr>
+					<td>银行：</td>
+					<td><input type="text" name="bank" placeholder="请输入银行名称"></>
+					</td>
+					<td>额度：</td>
+					<td><input type="text" name="number" placeholder="请输入您的额度"></>
+					</td>
+					<td>使用年限：</td>
+					<td><input type="text" name="years" placeholder="请输入您的使用年限"></>
+					</td>
+				</tr>
+				<tr>
+					<td><button type="submit">提交</button>
+		</fieldset>
+		</td>
+		</tr>
+		</table>
+		</fieldset>
+		<fieldset>
+			<legend>联系人信息</legend>
+			<table>
+				<tr>
+					<td>直系亲属：</td>
+					<td><input type="text" name="relative" placeholder="请输入您的直系亲属姓名"></>
+					</td>
+					<td>关系：</td>
+					<td><input type="text" name="relationship" placeholder="请输入与您的关系"></>
+					</td>
+					<td>手机号码：</td>
+					<td><input type="text" name="phonenumber" placeholder="请输入他的手机号码"></>
+					</td>
+				</tr>
+				<tr>
+					<td>朋友：</td>
+					<td><input type="text" name="friend" placeholder="请输入您的朋友姓名"></>
+					</td>
+					<td>手机号码：</td>
+					<td><input type="text" name="phone" placeholder="请输入他的手机号码"></>
+					</td>
+				</tr>
+				<tr>
+					<td><button type="submit">提交</button></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+
+</html>
