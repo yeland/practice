@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style type="text/css">
+        [title]{
+            border:1px solid grey;
+        }
+        [title="demo"]{
+            color:red;
+        }
+        [title*=demo]{
+            text-align: center;
+        }
+        [title=zh],[title^=zh-]{
+            background-color: brown;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div title="zh">Hello World</div>
+    <div title="demo">Hello World</div>
+    <div>Hello World</div>
+    <div>Hello World</div>
+    <div title="zh-j">Hello World</div>
+    <div title="somedemos">Hello World</div>
+    <div>Hello World</div>
+    <div>Hello World</div>
+    <div title="demos">Hello World</div>   
+    <div>Hello World</div>
+</body>
+
+</html>
