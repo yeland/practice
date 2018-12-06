@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>定时器示例</title>
+</head>
+
+<body>
+  <input type="text" id="result">
+  <input type="button" id="start" value="开始">
+  <input type="button" id="stop" value="结束">
+  <script>
+    var start = document.getElementById('start');
+    var stop = document.getElementById('stop');
+    var result = document.getElementById('result');
+    var t = null;
+    var count = 0;
+    var second = 0;
+    var minute = 0;
+    start.onclick = function () {
+      count = 0;
+      result.value = "";
+      t = setInterval("timeCount()", 1000);
+      start.disabled = true;
+    };
+    stop.onclick = function () {
+      clearInterval(t);
+      result.value = minute+'分'+second+'秒';
+      start.disabled = false;
+    };
+    function timeCount() {
+      count = count + 1;
+      minute = Math.floor(count / 60);
+      second = count % 60;
+      console.log(count);
+    }
+  </script>
+</body>
+
+</html>
