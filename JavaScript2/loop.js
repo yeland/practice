@@ -1,9 +1,11 @@
 //1-20奇数偶数
 for (var i = 1; i <= 20; i++) {
-  if (i % 2)
+  if (i % 2){
     console.log(i + '是奇数。');
-  else
+  }
+  else {
     console.log(i + '是偶数。');
+  }
 }
 
 //9*9乘法表

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <audio id="audio" controls></audio>
+    <br>
+    <button id="music" type="button" onclick="requestMusic()">获取歌曲</button>
+    <button id="lyric" type="button" onclick="requestLyric()">获取歌词</button>
+    <p id="showLyric"></p>
+    <script>
+        var ajax = {
+            request: function (url, method, callback, string) {
+                var xhr = new XMLHttpRequest();
+
+                xhr.open(method, url, true);
+                if (method == "post") {
+                    xhr.send(string);
+                } else {
+                    xhr.send(null);
+                }
+                xhr.onreadystatechange = function () {
+                    callback(xhr);
+                }
+            }
+        }
+        function requestMusic() {
+            ajax.request("https://api.imjad.cn/cloudmusic/?type=song&id=28012031", "get",
+                function (xhr) {
+                    if (xhr.readyState == 3 && xhr.status == 200) {
+                        const response = JSON.parse(xhr.response);
+                        var url = response.data[0].url;
+                        document.getElementById("audio").src = url;
+                    }
+                })
+        }
+        function requestLyric() {
+            ajax.request("https://api.imjad.cn/cloudmusic/?type=lyric&id=28012031", "get",
+                function (xhr) {
+                    if (xhr.readyState == 3 && xhr.status == 200) {
+                        const response = JSON.parse(xhr.response);
+                        var lyric = response.lrc.lyric;
+                        document.getElementById("showLyric").innerHTML = lyric;
+                    }
+                })
+        }
+    </script>
+</body>
+
+</html>

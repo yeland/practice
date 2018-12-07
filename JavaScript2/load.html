@@ -3,10 +3,10 @@
 
 <body>
   <p>账号：
-    <input id="name" type="text" name="acount" placeholder="请输入您的帐号">
+    <input id="name" type="text" name="acount" placeholder="请输入您的帐号" />
   </p>
   <p>密码：
-    <input id="password" type="password" name="password" placeholder="请输入登入密码">
+    <input id="password" type="password" name="password" placeholder="请输入登入密码"/>
   </p>
   <button id="confirm" type="button">登录</button>
   <script>
@@ -24,11 +24,7 @@
       }
     }
     function verify(name,pwd){
-      if(name=="123" && pwd=="123"){
-        return true;
-      } else{
-        return false;       
-      }
+      return name=="123" && pwd=="123";
     }     
   </script>
 </body>
