@@ -9,7 +9,7 @@ public class Main {
         Commodity commodity1 = new Commodity(1, "phone", 1500);
         Commodity commodity2 = new Commodity(2, "phone", 3300);
         Commodity commodity3 = new Commodity(3, "television", 1200);
-        Commodity[] commodities = new Commodity[]{commodity1, commodity2, commodity3};
+        Commodity[] commodities = {commodity1, commodity2, commodity3};
         List<Commodity> commodityList = Arrays.asList(commodities);
         commodityList.forEach(item ->
                 System.out.println(item.toString() + " is needed: " + getCommodity(item))
