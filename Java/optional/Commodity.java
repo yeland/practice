@@ -34,4 +34,8 @@ public class Commodity {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public String toString() {
+        return "The Commodity[id:"+getId()+", name:"+getName()+", price:"+getPrice()+"]";
+    }
 }
